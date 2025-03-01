@@ -8,13 +8,13 @@ import { Alert, AlertTitle, AlertDescription } from "../../../components/ui/aler
 const RescueCenterRegistration = () => {
   const [formData, setFormData] = useState({
     // Basic Information
-    center_name: '',
+    centre_name: '',
     registration_number: '',
     // Contact Information
     email: '',
     phone: '',
     // Address Information
-    address_line_1: '',
+    address_line1: '',
     city: '',
     state: '',
     pincode: '',
