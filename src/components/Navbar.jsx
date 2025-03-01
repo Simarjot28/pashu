@@ -24,7 +24,7 @@ const Navbar = () => {
             className="flex items-center space-x-2 text-pink-600 hover:text-pink-700 transition-colors"
           >
             <PawPrint className="w-8 h-8 fill-current" />
-            <span className="text-2xl font-bold">PawRescue</span>
+            <span className="text-2xl font-bold">Pashu Kalyan</span>
           </Link>
 
           {/* Desktop Navigation */}

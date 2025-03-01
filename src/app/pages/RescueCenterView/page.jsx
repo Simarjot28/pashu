@@ -2,7 +2,7 @@ import React from 'react';
 import { AiFillMail } from "react-icons/ai"; 
 import { MapPin, Star, Shield, Clock, Phone, Check } from 'lucide-react';
 import { Card, CardContent } from '../../../components/ui/Card';
-
+import Link from 'next/link';
 const RescueCenterCard = () => {
   // Sample data for rescue centers
   const rescueCenters = [
@@ -50,25 +50,36 @@ const RescueCenterCard = () => {
     }
   ];
 
-
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mt-8 mb-4">
-            Nearby Rescue Centers 
-          </h1>
-          <p className="text-lg text-gray-600">
-            Find trusted animal rescue centers in your area
-          </p>
+        <div className="flex justify-between items-center mb-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mt-8 mb-4">
+              Nearby Rescue Centers 
+            </h1>
+            <p className="text-lg text-gray-600">
+              Find trusted animal rescue centers in your area
+            </p>
+          </div>
+
+          {/* Register Button */}
+          import Link from 'next/link';
+
+<Link href="RescueCenter">
+  <button className="bg-pink-600 text-white py-2 px-6 rounded-lg hover:bg-pink-700 transition duration-300">
+    Register as Rescue Center
+  </button>
+</Link>
+
         </div>
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {rescueCenters.map((center, index) => (
             <Card key={index} className="overflow-hidden hover:shadow-lg transition duration-300">
-                <CardContent className="p-6">
+              <CardContent className="p-6">
                 {/* Header Info */}
                 <div className="mb-4">
                   <div className="flex justify-between items-start">
@@ -124,15 +135,15 @@ const RescueCenterCard = () => {
                 </div>
 
                 {/* Contact Button */}
-                <div className='flex  justify-between gap-2'>
-                <button className="w-1/2 mt-4 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300 flex items-center justify-center">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Contact Center
-                </button>
-                <button className="w-1/2 mt-4 bg-white py-2 px-4 rounded-lg text-blue-700 transition duration-300 flex items-center justify-center" >
-                  <AiFillMail className="w-4 h-4 mr-2" />
-                  Mail them
-                </button>
+                <div className="flex justify-between gap-2">
+                  <button className="w-1/2 mt-4 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300 flex items-center justify-center">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Contact Center
+                  </button>
+                  <button className="w-1/2 mt-4 bg-white py-2 px-4 rounded-lg text-blue-700 transition duration-300 flex items-center justify-center" >
+                    <AiFillMail className="w-4 h-4 mr-2" />
+                    Mail them
+                  </button>
                 </div>
               </CardContent>
             </Card>

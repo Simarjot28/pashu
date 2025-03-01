@@ -21,7 +21,7 @@ const animals = [
     personality: "Playful and friendly",
     health: "Fully vaccinated",
     specialNeeds: false,
-    image: "https://picsum.photos/200/200?random=1"
+    image: "https://static01.nyt.com/images/2022/01/06/multimedia/06xp-Dog/06xp-Dog-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ const animals = [
     personality: "Independent and calm",
     health: "Spayed/Neutered",
     specialNeeds: false,
-    image: "https://picsum.photos/200/200?random=2"
+    image: "https://www.cnet.com/a/img/resize/843868f4615535e4f5a8a9eb7125b79f58ee4a3e/hub/2019/12/02/8b898eba-189c-4fe9-b6f6-c9dfe0dd81bf/orangecat.jpg?auto=webp&fit=crop&height=675&width=1200"
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ const animals = [
     personality: "Gentle and curious",
     health: "Healthy",
     specialNeeds: false,
-    image: "https://picsum.photos/200/200?random=3"
+    image: "https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2015/07/wt_watership_down_bunny_free.jpg"
   },
   {
     id: 4,
@@ -54,7 +54,7 @@ const animals = [
     personality: "Loyal and loving",
     health: "Senior care needed",
     specialNeeds: true,
-    image: "https://picsum.photos/200/200?random=4"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2IL_lhNx4cChcZYPr4KVvt-lzEFRB6O8JZQ&s"
   },
   {
     id: 5,
@@ -92,7 +92,7 @@ const page = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-green-100 relative overflow-hidden">
       {/* Header */}
-      <div className="bg-green-700 text-white py-16 text-center">
+      <div className="bg-pink-600 text-white my-10 py-16 text-center">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -121,8 +121,8 @@ const page = () => {
               variant={selectedSpecies === filter.species ? "default" : "outline"}
               className={`
                 ${selectedSpecies === filter.species 
-                  ? 'bg-green-600 text-white' 
-                  : 'border-green-600 text-green-600 hover:bg-green-50'
+                  ? 'bg-pink-600 text-white' 
+                  : 'border-pink-600 text-pink-600 hover:bg-green-50'
                 } flex items-center gap-2
               `}
               onClick={() => setSelectedSpecies(

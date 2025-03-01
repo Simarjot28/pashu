@@ -8,10 +8,10 @@ const RescueForm = () => {
     full_name: '',
     animal_type: '',
     phone_number: '',
-    location_address: '',
-    postal_code: '',
-    city_name: '',
-    image: null
+    address: '',
+    pincode: '',
+    city: '',
+    animal_image: null // Changed 'image' to 'animal_image'
   })
   
   const [previewImage, setPreviewImage] = useState(null)
@@ -35,7 +35,7 @@ const RescueForm = () => {
     if (file) {
       setFormData({
         ...formData,
-        image: file
+        animal_image: file // Changed 'image' to 'animal_image'
       })
       
       const reader = new FileReader()
@@ -50,7 +50,7 @@ const RescueForm = () => {
     setPreviewImage(null)
     setFormData({
       ...formData,
-      image: null
+      animal_image: null // Changed 'image' to 'animal_image'
     })
     if (fileInputRef.current) {
       fileInputRef.current.value = ''
@@ -101,10 +101,10 @@ const RescueForm = () => {
           full_name: '',
           animal_type: '',
           phone_number: '',
-          location_address: '',
-          postal_code: '',
-          city_name: '',
-          image: null
+          address: '',
+          pincode: '',
+          city: '',
+          animal_image: null // Changed 'image' to 'animal_image'
         })
         setPreviewImage(null)
         setSubmitSuccess(true)
@@ -286,15 +286,15 @@ const RescueForm = () => {
             <h3 className="text-lg font-medium text-gray-900 border-b pb-2">Location Details</h3>
             
             <div>
-              <label htmlFor="location_address" className="block text-sm font-medium text-gray-700 mb-1">Address</label>
+              <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-1">Address</label>
               <div className="relative rounded-md shadow-sm">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <Home className="h-5 w-5 text-gray-400" />
                 </div>
                 <textarea
-                  id="location_address"
-                  name="location_address"
-                  value={formData.location_address}
+                  id="address"
+                  name="address"
+                  value={formData.address}
                   onChange={handleChange}
                   rows="2"
                   className="pl-10 block w-full rounded-md border-gray-300 shadow-sm focus:ring-pink-500 focus:border-pink-500 sm:text-sm py-2 border px-3"
@@ -306,16 +306,16 @@ const RescueForm = () => {
             
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label htmlFor="postal_code" className="block text-sm font-medium text-gray-700 mb-1">Pincode</label>
+                <label htmlFor="pincode" className="block text-sm font-medium text-gray-700 mb-1">Pincode</label>
                 <div className="relative rounded-md shadow-sm">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <MapPin className="h-5 w-5 text-gray-400" />
                   </div>
                   <input
                     type="text"
-                    id="postal_code"
-                    name="postal_code"
-                    value={formData.postal_code}
+                    id="pincode"
+                    name="pincode"
+                    value={formData.pincode}
                     onChange={handleChange}
                     className="pl-10 block w-full rounded-md border-gray-300 shadow-sm focus:ring-pink-500 focus:border-pink-500 sm:text-sm py-2 border px-3"
                     placeholder="123456"
@@ -325,16 +325,16 @@ const RescueForm = () => {
               </div>
               
               <div>
-                <label htmlFor="city_name" className="block text-sm font-medium text-gray-700 mb-1">City</label>
+                <label htmlFor="city" className="block text-sm font-medium text-gray-700 mb-1">City</label>
                 <div className="relative rounded-md shadow-sm">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Building className="h-5 w-5 text-gray-400" />
                   </div>
                   <input
                     type="text"
-                    id="city_name"
-                    name="city_name"
-                    value={formData.city_name}
+                    id="city"
+                    name="city"
+                    value={formData.city}
                     onChange={handleChange}
                     className="pl-10 block w-full rounded-md border-gray-300 shadow-sm focus:ring-pink-500 focus:border-pink-500 sm:text-sm py-2 border px-3"
                     placeholder="City name"

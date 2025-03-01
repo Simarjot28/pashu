@@ -6,9 +6,9 @@ import { FaFirstAid } from 'react-icons/fa';
 
 const LandingPage = () => {
   return (
-    <div className="bg-gradient-to-br from-pink-50 to-orange-50 ">
+    <div className="bg-gradient-to-br from-pink-50 to-orange-50 my-10 ">
       {/* Main Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <section className="max-w-7xl mx-12  sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 min-h-screen ">
           {/* Left Column - Text Content */}
           <motion.div
@@ -35,7 +35,7 @@ const LandingPage = () => {
                 Adopt a Friend
               </motion.div>
               </Link>
-              <Link href='/pages/Medical Assistance' className='preact-link'>
+              <Link href='/pages/HelpRegister' className='preact-link'>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -71,7 +71,7 @@ const LandingPage = () => {
             <img
               src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
               alt="Rescued Dog"
-              className="rounded-lg shadow-2xl"
+              className="rounded-lg shadow-2xl mx-12"
             />
             
           </motion.div>

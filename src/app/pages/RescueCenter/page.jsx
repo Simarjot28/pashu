@@ -112,11 +112,11 @@ const RescueCenterRegistration = () => {
       setTimeout(() => {
         setSuccess(false);
         setFormData({
-          center_name: '',
+          centre_name: '',
           registration_number: '',
           email: '',
           phone: '',
-          address_line_1: '',
+          address_line1: '',
           city: '',
           state: '',
           pincode: '',
@@ -157,8 +157,8 @@ const RescueCenterRegistration = () => {
                     </label>
                     <input
                       type="text"
-                      name="center_name"
-                      value={formData.center_name}
+                      name="centre_name"
+                      value={formData.centre_name}
                       onChange={handleInputChange}
                       required
                       className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2"
@@ -223,8 +223,8 @@ const RescueCenterRegistration = () => {
                     </label>
                     <input
                       type="text"
-                      name="address_line_1"
-                      value={formData.address_line_1}
+                      name="address_line1"
+                      value={formData.address_line1}
                       onChange={handleInputChange}
                       required
                       className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2"
